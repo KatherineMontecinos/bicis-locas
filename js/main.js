@@ -3,7 +3,7 @@ function validateForm(){
 	var inputlastname = document.getElementById("lastname").value;
 	var inputemail = document.getElementById("input-email").value;
 	var inputpassword = document.getElementById("input-password").value;
-	var listabici = document.getElementsByClassName("form-control").selectedIndex;
+	var listabici = document.querySelector("select").value;
 
 	if( inputname == null || inputname.length == 0 || /^\s+$/.test(inputname) || /^[a-zA-Z]*$/.test(inputname) == false ) {
  		alert("Debe ingresar un nombre");
@@ -23,7 +23,7 @@ function validateForm(){
  		alert("Debe ingresar un password valido");
  		return false;
  	}
- 	else if( listabici == null || listabici == 0 ){
+ 	else if( listabici == 0 ){
  		alert("Debes seleccionar una opción");
  		return false;
  	}
